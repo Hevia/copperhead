@@ -1,0 +1,10 @@
+[package]
+name = "moraylib"
+version = "0.1.0"
+authors = ["Anthony Hevia <anthony@hevia.dev>"]
+edition = "2018"
+
+[lib]
+name = "moraylib"
+
+[dependencies]
