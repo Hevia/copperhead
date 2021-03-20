@@ -4,7 +4,10 @@ version = "0.1.0"
 authors = ["Anthony Hevia <anthony@hevia.dev>"]
 edition = "2018"
 
+[dependencies.pyo3]
+version = "0.13.2"
+features = ["extension-module"]
+
 [lib]
 name = "moraylib"
-
-[dependencies]
+crate-type = ["cdylib"]
