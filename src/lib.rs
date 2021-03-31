@@ -9,7 +9,7 @@ fn read_file(filename: String) -> PyResult<String>{
 }
 
 #[pymodule]
-fn moray_lib(_py: Python<'_>, m: &PyModule) -> PyResult<()> {
+fn copperhead(_py: Python<'_>, m: &PyModule) -> PyResult<()> {
     m.add_function(wrap_pyfunction!(read_file, m)?)?;
     Ok(())
 }
