@@ -1,4 +1,5 @@
 # Copperhead
+![Copperhead Logo](./1024copperhead_logo.png)
 
 <p align="center">
 <a href="https://pypi.python.org/pypi/copperhead">
@@ -20,12 +21,10 @@
 
 </p>
 
-An extended Python library
-
+A no dependency Python library to help you write safe & concise code.
 
 * Free software: GPL-3.0-only
 * Documentation: <https://copperhead.readthedocs.io>
-
 
 ## Features
 
