@@ -1,119 +1,33 @@
-# Contributing
+# How to contribute
 
-Contributions are welcome, and they are greatly appreciated! Every little bit
-helps, and credit will always be given.
+## How to get started
 
-You can contribute in many ways:
-
-## Types of Contributions
-
-### Report Bugs
-
-Report bugs at https://github.com/hevia/copperhead/issues.
-
-If you are reporting a bug, please include:
-
-* Your operating system name and version.
-* Any details about your local setup that might be helpful in troubleshooting.
-* Detailed steps to reproduce the bug.
-
-### Fix Bugs
-
-Look through the GitHub issues for bugs. Anything tagged with "bug" and "help
-wanted" is open to whoever wants to implement it.
-
-### Implement Features
-
-Look through the GitHub issues for features. Anything tagged with "enhancement"
-and "help wanted" is open to whoever wants to implement it.
-
-### Write Documentation
-
-Copperhead could always use more documentation, whether as part of the
-official Copperhead docs, in docstrings, or even on the web in blog posts,
-articles, and such.
-
-### Submit Feedback
-
-The best way to send feedback is to file an issue at https://github.com/hevia/copperhead/issues.
-
-If you are proposing a feature:
-
-* Explain in detail how it would work.
-* Keep the scope as narrow as possible, to make it easier to implement.
-* Remember that this is a volunteer-driven project, and that contributions
-  are welcome :)
-
-## Get Started!
-
-Ready to contribute? Here's how to set up `copperhead` for local development.
-
-1. Fork the `copperhead` repo on GitHub.
-2. Clone your fork locally
-
+Before anything else, please install the git hooks that run automatic scripts during each commit and merge to strip the notebooks of superfluous metadata (and avoid merge conflicts). After cloning the repository, run the following command inside it:
 ```
-    $ git clone git@github.com:your_name_here/copperhead.git
+nbdev_install_git_hooks
 ```
 
-3. Ensure [poetry](https://python-poetry.org/docs/) is installed.
-4. Install dependencies and start your virtualenv:
+## Did you find a bug?
 
-```
-    $ poetry install -E test -E doc -E dev
-```
+* Ensure the bug was not already reported by searching on GitHub under Issues.
+* If you're unable to find an open issue addressing the problem, open a new one. Be sure to include a title and clear description, as much relevant information as possible, and a code sample or an executable test case demonstrating the expected behavior that is not occurring.
+* Be sure to add the complete error messages.
 
-5. Create a branch for local development:
+#### Did you write a patch that fixes a bug?
 
-```
-    $ git checkout -b name-of-your-bugfix-or-feature
-```
+* Open a new GitHub pull request with the patch.
+* Ensure that your PR includes a test that fails without your patch, and pass with it.
+* Ensure the PR description clearly describes the problem and solution. Include the relevant issue number if applicable.
 
-   Now you can make your changes locally.
+## PR submission guidelines
 
-6. When you're done making changes, check that your changes pass the
-   tests, including testing other Python versions, with tox:
+* Keep each PR focused. While it's more convenient, do not combine several unrelated fixes together. Create as many branches as needing to keep each PR focused.
+* Do not mix style changes/fixes with "functional" changes. It's very difficult to review such PRs and it most likely get rejected.
+* Do not add/remove vertical whitespace. Preserve the original style of the file you edit as much as you can.
+* Do not turn an already submitted PR into your development playground. If after you submitted PR, you discovered that more work is needed - close the PR, do the required work and then submit a new PR. Otherwise each of your commits requires attention from maintainers of the project.
+* If, however, you submitted a PR and received a request for changes, you should proceed with commits inside that PR, so that the maintainer can see the incremental fixes and won't need to review the whole PR again. In the exception case where you realize it'll take many many commits to complete the requests, then it's probably best to close the PR, do the work and then submit it again. Use common sense where you'd choose one way over another.
 
-```
-    $ tox
-```
+## Do you want to contribute to the documentation?
 
-7. Commit your changes and push your branch to GitHub:
+* Docs are automatically created from the notebooks in the nbs folder.
 
-```
-    $ git add .
-    $ git commit -m "Your detailed description of your changes."
-    $ git push origin name-of-your-bugfix-or-feature
-```
-
-8. Submit a pull request through the GitHub website.
-
-## Pull Request Guidelines
-
-Before you submit a pull request, check that it meets these guidelines:
-
-1. The pull request should include tests.
-2. If the pull request adds functionality, the docs should be updated. Put
-   your new functionality into a function with a docstring, and add the
-   feature to the list in README.md.
-3. The pull request should work for Python 3.6, 3.7, 3.8, 3.9 and for PyPy. Check
-   https://github.com/hevia/copperhead/actions
-   and make sure that the tests pass for all supported Python versions.
-
-## Tips```
-    $ pytest tests.test_copperhead
-```To run a subset of tests.
-
-
-## Deploying
-
-A reminder for the maintainers on how to deploy.
-Make sure all your changes are committed (including an entry in HISTORY.md).
-Then run:
-
-```
-$ poetry patch # possible: major / minor / patch
-$ git push
-$ git push --tags
-```
-
-Travis will then deploy to PyPI if tests pass.
