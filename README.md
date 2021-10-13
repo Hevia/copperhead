@@ -1,8 +1,13 @@
 # Copperhead
-![Copperhead Logo](./1024copperhead_logo.png)
+> Testing out nbdev
 
-A 0 dependency Python package to help you write safe & concise code.
 
-## Features
+This file will become your README and also the index of your documentation.
 
-* TODO
+## Install
+
+`pip install copperhead`
+
+## How to use
+
+Fill me in please! Don't forget code examples:
